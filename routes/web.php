@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->middleware(['auth', 'verified'])->name('about');
+
 Route::get('/aws', function () {
     return Inertia::render('AWS');
 })->middleware(['auth', 'verified'])->name('aws');
